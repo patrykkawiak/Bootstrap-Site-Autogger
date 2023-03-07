@@ -1,0 +1,619 @@
+$main-color: rgb(12, 125, 218);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+
+body {
+    position: relative;
+    font-family: sans-serif;
+    background-color: white;
+
+}
+
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    z-index: 40;
+
+}
+
+.links {
+
+
+    .nav-br {
+
+
+
+        span {
+            color: $main-color;
+        }
+
+        i {
+            transform: translate(-5px);
+        }
+    }
+
+
+    a {
+        margin: 0 30px;
+        font-size: 22px;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 10px;
+        color: white;
+        transition: color 0.3s;
+    }
+
+    a:hover {
+        color: $main-color;
+    }
+}
+
+// hero
+
+
+
+.hero-bg {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url('/img/auto-1868726_1920.jpg');
+    z-index: 0;
+
+    i {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 40px;
+        color: white;
+        z-index: 10;
+        padding: 20px;
+
+        animation: jump 1s ease-in-out infinite;
+    }
+}
+
+.shadow-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1;
+}
+
+.hero-text {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 10;
+
+
+    h1 {
+        font-size: 50px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+}
+
+
+@keyframes jump {
+
+    0% {
+        bottom: 20px;
+    }
+
+    50% {
+        bottom: 50px;
+    }
+
+    100% {
+        bottom: 20px;
+    }
+}
+
+.aboutus-box {
+    box-shadow: inset 0 0 15px black;
+    height: 40vh;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: transform .3s;
+
+    i {
+        font-size: 40px;
+        color: $main-color;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        transition: .3s;
+        padding: 10px;
+    }
+
+    i:hover {
+        transform: scale(1.3);
+    }
+
+
+    h3 {
+        margin-bottom: 30px;
+    }
+
+    span {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+    }
+
+
+}
+
+.aboutus-box::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 90%;
+    left: 5%;
+    bottom: 60px;
+    background-color: transparent;
+    box-shadow: 0 0 10px black;
+}
+
+.aboutus-box:hover {
+    transform: scale(0.95);
+}
+
+
+
+.header-picture {
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    height: 50vh;
+    background-color: #333;
+
+}
+
+.header-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('/img/porsche-1851246_1920.jpg');
+    background-position: center;
+    filter: blur(2px);
+    background-size: cover;
+}
+
+.header-shadow {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-transform: uppercase;
+    z-index: 1;
+
+    h2 {
+        font-size: 70px;
+    }
+
+}
+
+.carousel {
+
+    margin-top: 100px;
+}
+
+.carousel-item img {
+    height: 700px;
+
+}
+
+.carousel-item {
+    position: relative;
+}
+
+
+.carousel-shadow {
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    background-color: rgba(0, 0, 0, .7);
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .carousel-text {
+        position: absolute;
+        color: white;
+        font-size: 30px;
+    }
+
+
+}
+
+
+.team-hero {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    background-image: url('/img/startup-593341_1920.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 100px;
+    margin-bottom: 80px;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.team-hero-shadow {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 2;
+}
+
+.team-hero-text {
+    position: absolute;
+    z-index: 5;
+    color: #fff;
+    text-align: center;
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 55px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+}
+
+
+
+
+.team-member {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    margin: 15px;
+    background-color: #fff;
+
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+
+    overflow: hidden;
+
+
+
+}
+
+
+.one {
+    background-image: url('/img/sekretarka.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.two {
+    background-image: url('/img/milek.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.three {
+    background-image: url('/img/tryc.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.four {
+    background-image: url('/img/szef.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.five {
+    background-image: url('/img/kacper.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.six {
+    background-image: url('/img/dawidk.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.team-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 80px 20px;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    clip-path: circle(0 at 50% 50%);
+
+    transition: 0.8s ease-in-out;
+
+    h1 {
+        color: gold;
+    }
+
+
+}
+
+.team-member:hover .team-text {
+    clip-path: circle(80% at 50% 50%);
+}
+
+
+
+.achievments-banner {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 40px;
+
+}
+
+.achievments-banner::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 10%;
+    background-color: $main-color;
+    bottom: -10px;
+}
+
+.achievments {
+    margin-top: 185px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+
+
+    .ach-item {
+        position: relative;
+        height: 100px;
+        width: 100px;
+    }
+
+
+
+    .sec::after {
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background-color: $main-color;
+        bottom: -15px;
+        left: -5px;
+        transform: scaleX(0);
+        transform-origin: right;
+
+        transition: transform 0.3s;
+
+    }
+
+
+    .sec:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    .sec:hover p {
+        animation: magic 2s 0.5s forwards;
+    }
+
+    .thi:hover p {
+        animation: magic 2s 0.5s forwards;
+    }
+
+    .fou:hover p {
+        animation: magic 2s 0.5s forwards;
+    }
+
+    .fiv:hover p {
+        animation: magic 2s 0.5s forwards;
+    }
+
+    .si:hover p {
+        animation: magic 2s 0.5s forwards;
+    }
+
+
+    .thi::after {
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background-color: $main-color;
+        bottom: -15px;
+        left: -5px;
+        transform: scaleX(0);
+        transform-origin: right;
+
+        transition: transform 0.3s;
+
+    }
+
+
+    .thi:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+
+    }
+
+    .fou::after {
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background-color: $main-color;
+        bottom: -15px;
+        left: -5px;
+        transform: scaleX(0);
+        transform-origin: right;
+
+        transition: transform 0.3s;
+
+    }
+
+
+    .fou:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+
+    }
+
+    .fiv::after {
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background-color: $main-color;
+        bottom: -15px;
+        left: -5px;
+        transform: scaleX(0);
+        transform-origin: right;
+
+        transition: transform 0.3s;
+
+    }
+
+
+    .fiv:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+
+    }
+
+    .si::after {
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background-color: $main-color;
+        bottom: -15px;
+        left: -5px;
+        transform: scaleX(0);
+        transform-origin: right;
+
+        transition: transform 0.3s;
+
+    }
+
+
+    .si:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+
+    }
+
+
+
+
+    i {
+        height: 100%;
+        width: 100%;
+        font-size: 80px;
+        color: white;
+        text-shadow: 0 0 10px black;
+    }
+
+
+    p {
+        text-align: center;
+        position: absolute;
+        bottom: -100px;
+        color: $main-color;
+        font-weight: bold;
+        font-size: 20px;
+        right: -5px;
+        opacity: 0;
+    }
+
+    .mo {
+        left: -23px;
+    }
+
+
+}
+
+
+@keyframes magic {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
